@@ -9,8 +9,7 @@ public class Nth {
        int array1 [] = new int [] {1,2};
        int array2 [] = new int[] {3,1,2,2};
        int array3 [] = new int[] {3,1,2};
-       int result = nthPower(array1,2);
-       System.out.println(result);
+       System.out.println( nthPower(array1,2));
     }
     public static int nthPower(int[] array, int n) {
 

@@ -10,8 +10,7 @@ public class Smallest {
         int array1 [] = new int [] {4,1,2,7,5};
         int array2 [] = new int[] {3,1,2,-1};
         int array3 [] = new int[] {3,1,2,5};
-        int smallest = findSmallestInt(array1);
-        System.out.println(smallest);
+        System.out.println(findSmallestInt(array1));
     }
 
     public static int findSmallestInt(int[] array) {
