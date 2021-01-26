@@ -11,6 +11,7 @@ public class TribonacciSequence {
         double [] test3 =  new double [] {0,0,1};
 
         System.out.print(Arrays.toString(tribonacci(test,n)));
+       System.out.print(fib(10));
     }
 
 
@@ -20,13 +21,21 @@ public class TribonacciSequence {
         // each index bij elkaar op tellen
         // van de vorige value
         // kijk naar aantal keer bij 10 length
-        double [] newSquences = new double[0];
-        for (int i=0; i<n; i++)
-        {
-            newSquences = s;
-            
+        //math om elk 3 verplaatsen en op te tellen.
 
-        }
+        //start
+        int previous = 0;
+        double [] newSquences = s;
+
+
+
         return newSquences;
     }
+    static int fib(int n)
+    {
+        if (n <= 1)
+            return n;
+        return fib(n-1) + fib(n-2) +fib(n-3);
+    }
+
 }
