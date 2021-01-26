@@ -4,8 +4,6 @@ public class CountingDuplicates {
 
 
     public static void main(String[] args) {
-
-
         String test = "abcde";
         String test2 = "aabcde";
         System.out.print(duplicateCount(test2));
