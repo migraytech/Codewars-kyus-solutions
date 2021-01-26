@@ -1,10 +1,8 @@
 public class VowelCount {
 
     public static void main(String[] args) {
-
-
-        String word = "abracadabra";
-        getCount(word);
+        String word = "abracaiiiisseeeudabra";
+        System.out.print(getCount(word));
     }
 
     public static int getCount(String word)
