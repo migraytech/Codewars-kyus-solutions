@@ -44,7 +44,7 @@ public class UniqueNumber {
             }
         }
 
-        // Print duplicate elements from array in Java
+        // Print unique from array in Java
         Set<Map.Entry<Double, Integer>> entrySet = nameAndCount.entrySet();
         for (Map.Entry<Double, Integer> entry : entrySet) {
             if (entry.getValue() == 1 ) {
