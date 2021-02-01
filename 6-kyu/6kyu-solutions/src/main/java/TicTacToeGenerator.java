@@ -8,27 +8,40 @@ public class TicTacToeGenerator {
 
 
      public static String displayBoard(final char[] board, int width) {
-         StringBuilder displayboard = new StringBuilder();
-         int count = 0;
+         StringBuilder displayBoard = new StringBuilder();
          String element = "";
          for (int i = 0; i <board.length ; i++) {
-             
-             if (count == width) {
-                 element = String.valueOf((board[i]));
-                 displayboard.deleteCharAt(width+1);
-                 displayboard.append(String.format("%n%s |", element));
-                 count = 0;
+
+             if (i == width) {
+                 for (int j = 0; j < width ; j++) {
+                     if (j != width-1) {
+                         element = String.valueOf((board[j + width * i]));
+                         displayBoard.append(String.format("%s |", element));
+                     }
+                     else if( j == width-1) {
+                         element = String.valueOf((board[j + width * i]));
+                         displayBoard.append(String.format("%s ", element));
+                     }
+                 }
+             }
+             else  {
+                 displayBoard.append(String.format("\n {0} \n",(width * 4 - 1)));
+                 for (int j =0;  j< width; j++) {
+                     if (j != width - 1) {
+                         element = String.valueOf((board[j + width * i]));
+                         displayBoard.append(String.format("%s |", element));
+                     }
+                     else if (j == width - 1)
+                         element = String.valueOf((board[j + width * i]));
+                     displayBoard.append(String.format("%s ", element));
+                 }
+
              }
 
-             else if (count < width) {
-                 element =   String.valueOf(board[i]);
-                 displayboard.append(String.format("%1$1"+"s |",element));
-                 count++;
-             }
-
-             if(i == board.length-1)
-                 displayboard.deleteCharAt(displayboard.length()-1);
          }
-         return displayboard.toString(); //your code here
+         return displayBoard.toString(); //your code here
      }
+
+
+
 }
