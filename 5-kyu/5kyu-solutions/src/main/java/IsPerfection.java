@@ -31,6 +31,7 @@ public class IsPerfection {
             return 0;
         else
         {
+            // level higher is the index of the +1
             return 1+countChildren(root.left) + countChildren(root.right);
         }
     }
