@@ -13,36 +13,30 @@ public class ConsecutiveStrings {
 
     public static String longestConsec(String[] strarr, int k) {
 
-        String solution = "";
-        List<String> listOfLongest =  new ArrayList<String>();
-
-
-
-        String baseword = "";
 
         if (k > strarr.length || k <= 0) return "";
 
         // combinatie welke word groter is
 
 
+        StringBuilder maxWord = new StringBuilder();
+        for(int i=0; i<strarr.length-k; i++){
 
-        for(int i=0; i<strarr.length; i++){
+            StringBuilder currentWord = new StringBuilder();
+            for(int j = i; j< i+k; j++) {
+                currentWord.append(strarr[j]);
 
-            for(int j = i+k; j<strarr.length; j++) {
-                String word = strarr
 
-                if(word.length() > baseword.length()){
-                    baseword = word;
-                    listOfLongest.add(baseword);
-                }
+            }
+            if (maxWord.length() < currentWord.length()) {
+                maxWord = currentWord;
             }
 
         }
 
-        int index = listOfLongest.indexOf(baseword);
-        listOfLongest.remove(index);
 
-        return listOfLongest.get(1);
+
+        return maxWord.toString();
 
 
 
