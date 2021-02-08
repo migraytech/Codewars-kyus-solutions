@@ -34,8 +34,6 @@ public class ConsecutiveStrings {
 
         }
 
-
-
         return maxWord.toString();
 
 
