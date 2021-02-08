@@ -30,8 +30,10 @@ public class DidyouMean {
             nameAndcount.put(word, count);
             char[] CharacterWord = word.toCharArray();
             for (char c : CharacterWord) {
+
+                /// check on duplicated word not counted !!! in char
                 if (to.indexOf(c) != -1)
-                    
+
                     nameAndcount.put(word, nameAndcount.get(word)+1);
             }
         }
