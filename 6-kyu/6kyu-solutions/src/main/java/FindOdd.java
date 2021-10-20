@@ -51,8 +51,6 @@ public class FindOdd {
             //remove duplicate
             //create a zero list without duplicate
             int [] newArray = Arrays.stream(arr).distinct().toArray();
-            System.out.println(Arrays.toString(newArray));
-
 
             //count how many times its in the array
             // count the number in the map.
