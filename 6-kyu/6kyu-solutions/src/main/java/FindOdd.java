@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class FindOdd {
 
@@ -34,13 +32,10 @@ public class FindOdd {
         int [] fifth =  new int[] {1,1,1,1,1,1,10,1,1,1,1};
         int [] six =  new int[] {5,4,3,2,1,5,4,3,2,10,10};
 
-        System.out.println(findIt(second));
+        System.out.println(findIt(four));
     }
 
     public static int findIt(int[] arr) {
-
-        List<int[]> arraylist =  new ArrayList<>();
-
         if (arr.length == 0){
             return -1;
         }
@@ -50,26 +45,46 @@ public class FindOdd {
         }
         else
         {
-            int count = 0;
+            int counter = 0,result= 0;
+            boolean isOld;
 
             //remove duplicate
-
             //create a zero list without duplicate
+            int [] newArray = Arrays.stream(arr).distinct().toArray();
+            System.out.println(Arrays.toString(newArray));
+
 
             //count how many times its in the array
-                     // count the number in the list
+            // count the number in the map.
+            HashMap<Integer,Integer> countNumber = new HashMap<>();
+            for (int number:newArray) {
+                for (int j : arr) {
+                    if (number == j) {
+                        counter++;
+                    }
+                }
+                countNumber.put(number,counter);
+                //set the count on null
+                counter = 0;
+            }
 
             //check if the count is odd;
+            Set<Map.Entry<Integer, Integer>> set = countNumber.entrySet();
+            for (Map.Entry<Integer,Integer> map: set) {
+                if (ifOdd(map.getValue())){
 
-            //save the index of the number
+                    //save the index of the number
+                    result = map.getKey();
+                }
+            }
 
             // return the index from the original array
-
+            return result;
         }
-
-
-
-        return 0;
+    }
+    
+    public static boolean ifOdd(int value ){
+        return value % 2 == 1;
     }
 
 }
