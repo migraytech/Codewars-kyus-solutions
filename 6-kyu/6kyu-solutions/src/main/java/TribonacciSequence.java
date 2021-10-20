@@ -13,7 +13,6 @@ public class TribonacciSequence {
 
         System.out.print(Arrays.toString(tribonacci(test,n)));
     }
-    // Tribonacci  squences werkt
 
     public static double[] tribonacci(double[] s,int n) {
         double[] x;

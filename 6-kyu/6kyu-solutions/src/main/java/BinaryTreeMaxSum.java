@@ -31,7 +31,6 @@ public class BinaryTreeMaxSum {
 
     public static int maxSum(TreeNode root) {
 
-        // TODO: implementation
         int maxValueLeft = 0, maxValueRight = 0;
         if(root == null)
             return 0;
