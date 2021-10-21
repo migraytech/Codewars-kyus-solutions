@@ -25,6 +25,10 @@ public class StringMerger {
         char [] mergedchar = merged.toLowerCase().toCharArray();
 
 
+        if(s.length() != merged.length())
+            return false;
+
+
         if(mergedchar.length != final_word.length){
             return false;
         }
