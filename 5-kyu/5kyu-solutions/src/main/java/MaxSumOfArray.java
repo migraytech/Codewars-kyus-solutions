@@ -17,21 +17,33 @@ public class MaxSumOfArray {
     }
     public static int sequence(int[] arr) {
 
-        HashMap<Integer,Integer> map =  new HashMap<>();
-        int count = 0;
-
         if(arr.length == 0)
             return 0;
         else
-            for (int i = 0; i < arr.length; i++) {
-                map.put(i,arr[i]);
-            }
+            
 
-        Set<Map.Entry<Integer, Integer>> entrySet = map.entrySet();
-        for (Map.Entry<Integer, Integer> set:entrySet) {
-            count+=set.getValue();
-        }
-        return count;
+
+
+
+
+
+
+        //*This wrong algolritme to find the max sum of the subarray*//
+//        HashMap<Integer,Integer> map =  new HashMap<>();
+//        int count = 0;
+//
+//        if(arr.length == 0)
+//            return 0;
+//        else
+//            for (int i = 0; i < arr.length; i++) {
+//                map.put(i,arr[i]);
+//            }
+//
+//        Set<Map.Entry<Integer, Integer>> entrySet = map.entrySet();
+//        for (Map.Entry<Integer, Integer> set:entrySet) {
+//            count+=set.getValue();
+//        }
+//        return count;
     }
 
 
