@@ -33,7 +33,7 @@ public class FindTheIndex {
             max_left = arr[index];
             max_right = length-1;
 
-            for (int i = 0; i < ; i++) {
+            for (int i = 0; i < arr[0]; i++) {
 
 
             }
