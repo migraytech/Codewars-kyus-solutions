@@ -2,16 +2,13 @@
 public class StringMerger {
 
 
-    //    assertTrue("codewars can be created from code and wars", StringMerger.isMerge("codewars", "code", "wars"));
-    //    assertTrue("codewars can be created from cdwr and oeas", StringMerger.isMerge("codewars", "cdwr", "oeas"));
-    //    assertFalse("Codewars are not codwars", StringMerger.isMerge("codewars", "cod", "wars"));
 
     public static void main(String[] args) {
+        //    assertTrue("codewars can be created from cdwr and oeas",
 
-
+        System.out.println(isMerge("codewars", "code", "wars"));
+        System.out.println(isMerge("codewars", "cdwr", "oeas"));
         System.out.println(isMerge("codewars", "cod", "wars"));
-
-
     }
 
 
@@ -25,9 +22,14 @@ public class StringMerger {
         char [] mergedchar = merged.toLowerCase().toCharArray();
 
 
+
         if(s.length() != merged.length())
             return false;
 
+
+        if(final_word.length == 0 || mergedchar.length == 0){
+            return false;
+        }
 
         if(mergedchar.length != final_word.length){
             return false;
@@ -35,7 +37,7 @@ public class StringMerger {
 
         if(part1.isEmpty() || part2.isEmpty())
             return false;
-
+        
         for (char c: final_word) {
             if(new String(mergedchar).indexOf(c) == -1){
                 return false;
