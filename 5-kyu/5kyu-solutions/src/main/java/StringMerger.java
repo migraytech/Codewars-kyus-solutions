@@ -22,7 +22,6 @@ public class StringMerger {
         char [] mergedchar = merged.toLowerCase().toCharArray();
 
 
-
         if(s.length() != merged.length())
             return false;
 
@@ -37,7 +36,7 @@ public class StringMerger {
 
         if(part1.isEmpty() || part2.isEmpty())
             return false;
-        
+
         for (char c: final_word) {
             if(new String(mergedchar).indexOf(c) == -1){
                 return false;
