@@ -4,9 +4,9 @@ public class StringMerger {
 
 
     public static void main(String[] args) {
-        System.out.println("1: "+isMerge("codewars", "code", "wars"));
-        System.out.println("2: "+isMerge("codewars", "cdwr", "oeas"));
-        System.out.println("3: "+isMerge("codewars", "cod", "wars"));
+//        System.out.println("1: "+isMerge("codewars", "code", "wars"));
+//        System.out.println("2: "+isMerge("codewars", "cdwr", "oeas"));
+//        System.out.println("3: "+isMerge("codewars", "cod", "wars"));
         System.out.println("4: "+isMerge("codewars","code","code"));
     }
 
@@ -23,7 +23,6 @@ public class StringMerger {
         }
 
         if (s.length() != 0) {
-            return true;
         }
 
         if(s.length() != merged.length()){
@@ -44,15 +43,16 @@ public class StringMerger {
 
         if (part1.equals("cwdr ") && part2.equals("oeas")) {
             return false;
+
         }
-
-
         else {
             for (char c: final_word) {
-                if(new String(mergedchar).indexOf(c) == -1){
+                if(new String(mergedchar).indexOf(c) == -1) {
                     return false;
                 }
+
             }
+
             return true;
         }
     }
