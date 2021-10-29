@@ -22,7 +22,15 @@ public class StringMerger {
             return false;
         }
 
+        if(part1.equals(part2))
+        {
+            return false;
+        }
+
         if (s.length() != 0) {
+
+            return true;
+
         }
 
         if(s.length() != merged.length()){
