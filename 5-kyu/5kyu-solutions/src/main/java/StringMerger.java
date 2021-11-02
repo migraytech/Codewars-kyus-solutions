@@ -2,12 +2,11 @@
 public class StringMerger {
 
 
-
     public static void main(String[] args) {
 //        System.out.println("1: "+isMerge("codewars", "code", "wars"));
 //        System.out.println("2: "+isMerge("codewars", "cdwr", "oeas"));
-        System.out.println("3: "+isMerge("codewars", "code", "wasr"));
-        System.out.println("4: "+isMerge("codewars","code","code"));
+        System.out.println("3: " + isMerge("codewars", "code", "wasr"));
+        System.out.println("4: " + isMerge("codewars", "code", "code"));
     }
 
 
@@ -15,13 +14,11 @@ public class StringMerger {
 
         String merged = part1.trim() + part2.trim();
 
-        char [] final_word = s.toLowerCase().toCharArray();
-        char [] mergedchar = merged.toLowerCase().toCharArray();
+        char[] final_word = s.toLowerCase().toCharArray();
+        char[] mergedchar = merged.toLowerCase().toCharArray();
 
 
-
-
-        if(s.equals("")) {
+        if (s.equals("")) {
             return part1.equals("") && part2.equals("");
         }
 
@@ -30,32 +27,16 @@ public class StringMerger {
             return false;
         }
 
-        if(part1.equals(part2))
-        {
+        if (part1.equals(part2)) {
             return false;
         }
 
-        if (s.length() != 0) {
-
-           return true;
-        }
-
-
         else {
-            for (char c: final_word) {
 
-                if(new String(mergedchar).indexOf(c) == -1) {
-                    return false;
-                }
+            // different algoritme
 
-
-
-
-
-            }
-
-            return final_word[final_word.length-1] != mergedchar[mergedchar.length-1];
         }
-    }
+        return false;
 
+    }
 }
