@@ -28,10 +28,9 @@ public class WhoLikesIt {
         else if (names.length == 3) {
             sentences +=names[0]+", "+ names[1]+" and "+names[2]+" "+"like this";
         }
-        else if (names.length >= 4) {
+        else {
             sentences +=names[0]+", "+ names[1]+" and " + Math.abs(names.length-2)+" "+"others like this";
         }
-        // checken bij 3 en 2 namen en meer
 
         return sentences.trim();
 

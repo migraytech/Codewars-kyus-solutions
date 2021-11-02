@@ -62,9 +62,20 @@ public class BinaryTreeMaxSum {
         }
     }
 
-    public static class BinaryTree
-    {
-        TreeNode root;
+
+    public static int maxSum(TreeNode root) {
+
+        int maxValueLeft = 0, maxValueRight = 0;
+        if(root == null)
+            return 0;
+
+        int res = root.value;
+
+        // add the previous number;
+         maxValueLeft  =  maxSum(root.left)  +  res;
+         maxValueRight  =  maxSum(root.right) +  res ;
+         int Left =  maxValueLeft;
+        int Right =  maxValueRight;
 
         // Constructors
         BinaryTree(int key)

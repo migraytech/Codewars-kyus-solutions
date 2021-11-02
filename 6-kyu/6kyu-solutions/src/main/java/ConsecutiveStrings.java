@@ -16,8 +16,6 @@ public class ConsecutiveStrings {
 
         if (k > strarr.length || k <= 0) return "";
 
-        // combinatie welke word groter is
-
 
         StringBuilder maxWord = new StringBuilder();
         for(int i=0; i<strarr.length-k; i++){
@@ -33,11 +31,7 @@ public class ConsecutiveStrings {
             }
 
         }
-
         return maxWord.toString();
-
-
-
 
     }
 }
