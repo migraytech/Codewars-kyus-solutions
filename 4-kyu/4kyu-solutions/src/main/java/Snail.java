@@ -31,7 +31,6 @@ public class Snail {
 
 
 
-
         return solution ;
     }
 }
