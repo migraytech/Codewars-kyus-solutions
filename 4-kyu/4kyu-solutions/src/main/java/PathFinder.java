@@ -46,7 +46,8 @@ public class PathFinder {
 
             System.out.println(value);
 
-            //Contain '.' 
+            //Contain '.'
+            // Check is fix on the line
 
             if(value == wall){
 
