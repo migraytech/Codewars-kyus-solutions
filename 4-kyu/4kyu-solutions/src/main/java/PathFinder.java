@@ -48,8 +48,9 @@ public class PathFinder {
 
             //Contain '.'
             // Check is fix on the line
-
             if(value == wall){
+
+                // EAST WEST NORTH SOUTH
 
             }
         }
