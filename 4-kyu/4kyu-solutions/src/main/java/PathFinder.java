@@ -31,16 +31,12 @@ public class PathFinder {
         String Dot = ".";  //Empty positions are marked
         String Lines = "\n";
 
-
         int x = 0,y = 0;
 
         // start position [0,0]
         // count the position
         char [] lines =  maze.trim().toCharArray();
         String [] path =  maze.trim().split("");
-
-
-
         //check and split three lines
         for (char value: lines){
 
@@ -51,6 +47,7 @@ public class PathFinder {
             if(value == wall){
 
                 // EAST WEST NORTH SOUTH
+                break; 
 
             }
         }
