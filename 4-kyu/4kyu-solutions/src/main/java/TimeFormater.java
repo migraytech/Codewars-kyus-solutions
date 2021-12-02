@@ -32,7 +32,7 @@ public class TimeFormater {
 
         if(seconds == 0)
             return "now";
-        return formatIntToString(seconds);
+        return "";
     }
 
     public static String formatIntToString(String value, int seconds)
