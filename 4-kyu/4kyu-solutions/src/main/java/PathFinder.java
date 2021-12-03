@@ -37,11 +37,15 @@ public class PathFinder {
         //check and split three lines
         for(int i = 0; 9 >lines.length; i++){
 
-
-
             //If the latest wall is a wall
-           if(lines[lines.length-1] == wall){
+           if(lines[lines.length-1] == wall) {
                return false;
+           }
+
+           if(lines[i] ==  dot){
+
+               break;
+
            }
         }
 
