@@ -19,10 +19,7 @@ public class PathFinder {
 // You are at position [0, 0] in maze NxN and you can only move in one of the four cardinal directions (i.e. North, East, South, West).
 // Return true if you can reach position [N-1, N-1] or false otherwise.
 
-
-
     public static boolean pathFinder(String maze) {
-
         char wall = 'W'; //Walls are marked
         char line = '\n';
         char dot = '.';  //Empty positions are marked
@@ -38,18 +35,14 @@ public class PathFinder {
         char [] lines =  maze.trim().toCharArray();
         String [] path =  maze.trim().split("");
         //check and split three lines
-        for (char value: lines){
+        for(int i = 0; 9 >lines.length; i++){
 
-            System.out.println(value);
 
-            //Contain '.'
-            // Check is fix on the line
-            if(value == wall){
 
-                // EAST WEST NORTH SOUTH
-                break; 
-
-            }
+            //If the latest wall is a wall
+           if(lines[lines.length-1] == wall){
+               return false;
+           }
         }
 
 
