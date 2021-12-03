@@ -41,17 +41,9 @@ public class PathFinder {
            if(lines[lines.length-1] == wall) {
                return false;
            }
-
-           if(lines[i] ==  dot){
-
-               break;
-
-           }
         }
 
-
-
-        return false;
+        return true;
     }
 
 
