@@ -40,6 +40,9 @@ public class PathFinder {
             //If the latest wall is a wall
            if(lines[lines.length-1] == wall) {
                return false;
+               
+               // start position [0,0]
+               // count the position
            }
         }
 
