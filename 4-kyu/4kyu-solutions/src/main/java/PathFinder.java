@@ -6,7 +6,6 @@ public class PathFinder {
 
 
     public static void main(String[] args) {
-
         String a = ".W.\n"+
                 ".W.\n"+
                 "...";
@@ -36,13 +35,12 @@ public class PathFinder {
         String [] path =  maze.trim().split("");
         //check and split three lines
         for(int i = 0; 9 >lines.length; i++){
-
             //If the latest wall is a wall
            if(lines[lines.length-1] == wall) {
                return false;
-               
                // start position [0,0]
                // count the position
+
            }
         }
 
