@@ -43,6 +43,9 @@ public class PathFinder {
                // count the position
                // start position [0,0]
            }
+
+            //count the position
+            /// start position [0,0]
         }
 
         return true;
